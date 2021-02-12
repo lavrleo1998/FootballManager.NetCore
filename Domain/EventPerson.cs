@@ -1,6 +1,6 @@
 ﻿using Domain.Entity;
 
-namespace Domain.Event
+namespace Domain
 {
     public class EventPerson : PersistentObject
     {

@@ -1,8 +1,6 @@
-﻿using Domain;
-using Domain.Enum;
-using Storage;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Services;
 using System;
-using System.Linq;
 
 namespace FootballManager
 {
@@ -10,33 +8,27 @@ namespace FootballManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            var context = new AppDbContext();
-
-            #region Init
-            context.Add(new Person()
-            {
-                Name = "Name",
-                PersonType = PersonType.Footboller,
-                Composition = Composition.Main,
-                Position = Position.Coach
-            });
+            var scope = Installer.Init();
+            var personService = scope.GetRequiredService<IPersonService>();
+            var eventService = scope.GetRequiredService<IEventService>();
+            var eventPersonService = scope.GetRequiredService<IEventPersonService>();
 
 
-            context.SaveChanges();
-        
-        #endregion
 
-        var person = context.Persons.FirstOrDefault();
-            person.Name = "Another Name";
+            Console.WriteLine(personService.GetPerson(1).Name + " " + personService.GetPerson(1).Position + " " + personService.GetPerson(1).PersonType);
+            Console.WriteLine(personService.GetPerson(2).Name + " " + personService.GetPerson(2).Position + " " + personService.GetPerson(2).PersonType);
 
-            context.Persons.Update(person);
-            context.SaveChanges();
+            Console.WriteLine(eventService.GetEvent(2).DateTime.Date.ToString() + " " + eventService.GetEvent(2).EventType.ToString());
+            eventService.GetPersonsByEventId(2).ForEach(x => Console.WriteLine(x));
+            Console.WriteLine(eventService.GetEvent(5).DateTime.Date.ToString() + " " + eventService.GetEvent(5).EventType.ToString());
+            eventService.GetPersonsByEventId(5).ForEach(x => Console.WriteLine(x));
+            Console.WriteLine(eventService.GetEvent(6).DateTime.Date.ToString() + " " + eventService.GetEvent(6).EventType.ToString());
+            eventService.GetPersonsByEventId(6).ForEach(x => Console.WriteLine(x));
 
-            Console.WriteLine();
 
             Console.ReadKey();
         }
-}
+
+
+    }
 }

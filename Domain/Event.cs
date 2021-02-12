@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Domain.Event
+namespace Domain
 {
     public class Event : PersistentObject
     {

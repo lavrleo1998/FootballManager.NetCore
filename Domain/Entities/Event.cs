@@ -13,5 +13,9 @@ namespace Domain
             People = new HashSet<EventPerson>();
         }
         public virtual ICollection<EventPerson> People { get; set; }
+        public override string ToString()
+        {
+            return $"{Id} {DateTime} {EventType}";
+        }
     }
 }

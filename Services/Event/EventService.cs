@@ -1,8 +1,7 @@
 ﻿using Domain;
-using Domain.Enum;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Repository.Interfaces;
-using Storage;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +15,7 @@ namespace Services
             EventProvider = eventProvider;
         }
 
-        public Event GetEvent(long id)
+        public Event Get(long id)
         {
             var person = EventProvider
                 .GetAll()
@@ -34,10 +33,16 @@ namespace Services
                 .FirstOrDefault();
 
             return persons.People.Select(x => x.Person).ToList();
+        }
 
 
-
-            ///List<Person> people
+        public void Remove(long id)
+        {
+            var scope = Installer.Init();
+            var eventService = scope.GetRequiredService<IEventService>();
+            var Event = eventService.Get(id) ?? throw new ServiceErrorException(863);
+            EventProvider.Remove(Event);
+            EventProvider.SaveChanges();
         }
 
     }

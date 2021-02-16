@@ -14,11 +14,12 @@ namespace Services
                 .AddScoped<IPersonService, PersonService>()
                 .AddScoped<IPersonProvider, PersonProvider>()
                 .AddScoped<IEventService, EventService>()
-                .AddScoped<IEventProvider, EventProvider>()
-                .AddScoped<IEventPersonService, EventPersonService>()
-                .AddScoped<IEventPersonProvider, EventPersonProvider>();
+                .AddScoped<IEventProvider, EventProvider>();
             return serviceConllection.BuildServiceProvider();
         }
+
+
+        //вариант для asp.net
         public static void AddBuisnessServices(this IServiceCollection container)
         {
             container
@@ -26,10 +27,8 @@ namespace Services
                 .AddScoped<IPersonService, PersonService>()
                 .AddScoped<IPersonProvider, PersonProvider>()
                 .AddScoped<IEventService, EventService>()
-                .AddScoped<IEventProvider, EventProvider>()
-                .AddScoped<IEventPersonService, EventPersonService>()
-                .AddScoped<IEventPersonProvider, EventPersonProvider>();
-            ///в асп нет не нужно возвращать контейнер(((
+                .AddScoped<IEventProvider, EventProvider>();
+            ///в asp.net не нужно возвращать контейнер(((
         }
     }
 }

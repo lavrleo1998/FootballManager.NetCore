@@ -9,5 +9,10 @@ namespace Domain
 
         public long PersonID { get; set; }
         public Person Person { get; set; }
+
+        public override string ToString()
+        {
+            return $"{EventId} {Event} {PersonID} {Person}";
+        }
     }
 }

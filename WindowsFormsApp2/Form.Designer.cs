@@ -45,16 +45,16 @@ namespace WindowsFormsApp2
             this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1469, 485);
+            this.richTextBox1.Size = new System.Drawing.Size(965, 489);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(649, 494);
+            this.button1.Location = new System.Drawing.Point(117, 498);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 48);
+            this.button1.Size = new System.Drawing.Size(151, 41);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@ namespace WindowsFormsApp2
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 512);
+            this.comboBox1.Location = new System.Drawing.Point(12, 516);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(73, 23);
             this.comboBox1.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace WindowsFormsApp2
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1483, 647);
+            this.tabControl1.Size = new System.Drawing.Size(979, 578);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -87,7 +87,7 @@ namespace WindowsFormsApp2
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1475, 619);
+            this.tabPage1.Size = new System.Drawing.Size(971, 550);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@ namespace WindowsFormsApp2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 494);
+            this.label1.Location = new System.Drawing.Point(12, 498);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 15);
             this.label1.TabIndex = 3;
@@ -115,7 +115,7 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1507, 671);
+            this.ClientSize = new System.Drawing.Size(1003, 602);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form";
             this.Text = "Form1";

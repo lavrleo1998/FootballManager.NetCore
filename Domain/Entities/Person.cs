@@ -28,5 +28,5 @@ namespace Domain
             Composition = composition;
             Position = position;
         }
-}
+    }
 }

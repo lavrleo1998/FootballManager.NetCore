@@ -42,7 +42,7 @@ namespace WindowsFormsApp2
             richTextBox1.Text += eventService.Get(4).ToString() + "\n";
             eventService.GetPersonsByEventId(4).ForEach(x=>richTextBox1.Text +=x.ToString() + "\n");
 
-            //personService.Add("dfkjsdjfl", Domain.Enum.PersonType.Footboller, Domain.Enum.Composition.Main, Domain.Enum.Position.Forward);
+            personService.Add("dfkjsdjfl", Domain.Enum.PersonType.Footboller, Domain.Enum.Composition.Main, Domain.Enum.Position.Forward);
 
             personService.Update("dfkjsdjfl", Domain.Enum.PersonType.Trainer, Domain.Enum.Composition.Main, Domain.Enum.Position.Forward);
 

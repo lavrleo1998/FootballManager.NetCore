@@ -19,14 +19,6 @@ namespace Services
             PersonProvider = personProvider;
         }
 
-
-
-
-
-
-
-
-
 /// <summary>
 /// ВОт как работает DTO!
 /// </summary>
